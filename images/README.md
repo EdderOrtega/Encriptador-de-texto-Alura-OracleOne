@@ -1,1 +1,1 @@
-Imagenes del challenge de alura
+Imágenes del challenge de Alura
