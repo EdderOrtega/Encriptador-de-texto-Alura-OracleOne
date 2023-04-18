@@ -1,0 +1,340 @@
+*{
+    background-color: var(--Lightblue300);
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --Darkblue100: #609ED4;
+    --Darkblue200: #356EA9;
+    --Darkblue300: #0A3871;
+    --Darkblue400: #072B61;
+    --Darkblue500: #052051;
+
+    --Gray100:#CED4DA;
+    --Gray200:#ADB5BD;
+    --Gray300:#868E96;
+    --Gray400:#495057;
+    --Gray500:#343A40;
+
+    --Lightblue100:#F3F5FC;
+    --Lightblue200:#EFF1FA;
+    --Lightblue300:#E9ECF8;
+    --Lightblue400:#AAB2D5;
+    --Lightblue500:#757FB2;
+
+    --fontboton:inter;
+    --fontinputcolor:var(--Darkblue300);
+    --fontsizeboton:16px;
+    --fontsizeinput:32px;
+    --fontsizemensaje:24px;
+}
+
+#logo{
+    margin: 20px;
+    width: 30px;
+    height: 40px;
+}
+header{
+    width: 100%;
+    height: 96px;
+    margin-bottom: 56px;
+}
+.conteiner{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+}
+
+#ingresar-texto{
+    border: none;
+    width: 340px;
+    height: auto;
+    margin: 10px;
+    padding: 5px;
+    margin-bottom: 256px;
+    text-align: left;
+    font-size: var(--fontsizeinput);
+    color:var(--fontinputcolor);
+    border-radius: 10px;
+}
+#ingresar-texto:focus{
+        color: var(--Darkblue300);
+    }
+#ingresar-texto::placeholder{
+    color:var(--Darkblue300);
+    font-size: var(--fontsizeinput);
+}
+.instrucciones{
+    display: flex;
+    font-size: 12px;
+    color:var(--Gray400);
+}
+.instrucciones img{
+    margin-left:16px;
+    width: 15px;
+    height: 15px;
+}
+.instrucciones p{
+    margin-left: 8px;
+    width: 205px;
+    height: 20px;
+    margin-bottom: 16px;
+}
+button{
+    margin-bottom:24px;
+}
+.btn-encriptar{
+    font-family: inter;
+    width: 343px;
+    height: 67px;
+    background-color: var(--Darkblue300);
+    color: whitesmoke;
+    border-radius: 20px;
+}
+.btn-encriptar:hover{
+    background: var(--Lightblue300);
+    color: var(--Darkblue300);
+}
+.btn-desencriptar{
+    font-family: inter;
+    width: 343px;
+    height: 67px;
+    background: var(--Lightblue300);
+    color: var(--Darkblue300);
+    border-radius: 20px;
+    margin-bottom: 64px;
+}
+.btn-desencriptar:hover{
+    background-color: var(--Darkblue300);
+    border: 1px solid var(--Lightblue300);
+    color: #E5E5E5;
+}
+.mensaje{
+    width: 90%;
+    display: grid;
+    border-radius:30px;
+    background-color: white;
+    justify-content: center;
+    align-items: center; 
+}
+.mensaje-error{
+    width: 80%;
+    text-align: center;
+    font-size: var(--fontsizemensaje);
+    font-family: inter bolder;
+    color: var(--Gray500);
+    background-color: white;
+    margin-bottom: 16px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.mensaje-instrucciones{
+    font-size: 16px;
+    display: block;
+    color: var(--Gray400);
+    height: 35px;
+    background-color: white;
+    font-family: inter;
+    margin-bottom: 30px;
+}
+.btn-copiar{
+    display: none;
+    font-family: inter;
+    width: 300px;
+    height: 50px;
+    background: white;
+    color: var(--Darkblue300);
+    border-radius: 20px;
+    border: 1px solid var(--Darkblue300);
+}
+#mi-popup {
+    width: 50%;
+    height: max-content;
+    display: grid;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    font-size: medium;
+    font-family: inter;
+    transform: translate(-50%, -50%);
+    background-color: var(--Darkblue500);
+    padding: 20px;
+    border: 1px solid black;
+    display: none;
+}
+#mi-popup button{
+    display: grid;
+    border: none;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: medium;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: var(--Darkblue300);
+}
+#mi-popup p{
+    margin: 10px;
+    justify-content: center;
+    font-style: italic;
+    background-color: var(--Darkblue500);
+    color: var(--Gray100);
+    display: grid;
+    border-radius: 10px;
+    font-size: large;
+    width: 100%;
+    padding: 5px;
+}
+
+@media (min-width:200px) and (max-width: 600px) {
+    .conteiner {
+        width: 90%;
+        display: grid;
+    }
+    .botones{
+        width: 100%;
+        display: grid;
+        justify-content: center;
+    }
+    .instrucciones{
+        margin-right: 110px;
+    }
+    .instrucciones img{
+        margin-left: 0px;
+    }
+    .mensaje{
+        margin-inline-start:auto;
+        display: grid;
+        place-items: center;
+        height: max-content;
+        margin-bottom: 30px;
+    }
+    .mensaje-instrucciones{
+        width: 200px;
+        height: 30px;
+        display: block;
+        text-align: center;
+    }
+    .hero-dibujo{
+        display: none;
+    }
+    .btn-copiar{
+        align-items: center;
+    }
+}
+@media (min-width: 600px) and (max-width: 1000px){
+    #logo{
+        margin: 30px;
+    }
+    .conteiner{
+        width:100%;
+    }
+    #ingresar-texto{
+        width: 85%;
+        margin-bottom: 700px;
+        margin-left: 50px;
+    }
+    .mensaje´{
+        margin-inline-start:auto;
+        display: grid;
+        margin: 50px;
+        width: 800px;
+        height: 150px;
+    }
+    .mensaje-error{
+        width: 90%;
+        padding: 10px;
+    }
+    .mensaje-instrucciones{
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .instrucciones{
+        width: 80%;
+    }
+    .botones{
+        width: 85%;
+        display: flex;
+        justify-content: center;
+        margin-left: 40px;
+    }
+    .btn-encriptar{
+        margin-right: 20px;
+    }
+    .btn-desencriptar{
+        margin-right: 30px;
+    }
+    .hero-dibujo{
+        display: none;
+    }
+    .btn-copiar{
+        justify-self:center;
+        align-items: center;
+        width: 700px;
+        align-items: center;
+    }
+}
+
+@media (min-width:1000px) and (max-width: 3000px) {
+    .conteiner{
+        width:100%;
+        display: grid;
+        grid-template-areas: 'ingresar-texto mensaje'
+                            'ingresar-texto mensaje'
+                            'instrucciones mensaje'
+                            'botones mensaje'    ;
+    }
+    header{
+        margin: 20px;
+        width: 50%;
+        height: 50px;
+    }
+    #ingresar-texto{
+        width: 50%;
+        grid-area: ingresar-texto;
+    }
+    .instrucciones{
+        margin-top: 300px;
+        margin-right: 380px;
+        grid-area: instrucciones;
+    }
+    .botones{
+        grid-area: botones;
+    }
+    .mensaje{
+        margin-top: -50px;
+        grid-area: mensaje;
+        display: grid;
+        width: 350px;
+        height: 800px;
+    }
+    .mensaje-error{
+        margin-left: 30px;
+        margin-top: -130px;
+    }
+    .mensaje-instrucciones{
+        width: 80%;
+        margin-left: 50px;
+        margin-top: -280px;
+    }
+    .hero-dibujo{
+        margin-top: 100px;
+        background-color: white;
+    }
+    .btn-encriptar{
+        margin-left: 50px;
+        width: 300px;
+    }
+    .btn-desencriptar{
+        width: 300px;
+        margin-left: 50px;
+    }
+    .btn-copiar{
+    align-self: flex-end;
+    align-items: center;
+    margin-left: 25px;
+    margin-bottom: 50px;
+    }
+}

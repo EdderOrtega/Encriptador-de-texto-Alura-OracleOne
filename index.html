@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="./script.js"> </script>
+    <title>Encriptador de texto</title>
+</head>
+<body>
+    <header>
+        <img id="logo" src="./images/Vector.png" alt="icono">
+    </header>
+    <div class="conteiner">        
+        <input id="ingresar-texto" type="text" placeholder="Ingrese el texto aqui">
+        <div class="instrucciones">
+            <img src="./images/bi_exclamation-circle-fill.png" alt="icono-signo-exclamación">
+            <p>Solo letras minúsculas y sin acento</p>
+        </div>
+        <div class="botones">            
+            <button id="btn-encriptar" onclick="encriptarTexto()" class="btn-encriptar"> Encriptar</button>
+            <button onclick="desencriptarTexto()" class="btn-desencriptar">Desencriptar</button>
+        </div>
+        <div class="mensaje">
+            <img id="hero-dibujo" class="hero-dibujo" src="./images/Muñeco.png" alt="dibujo-hombre" >
+            <h2 id="texto-resultado" class="mensaje-error">Ningún mensaje fue encontrado</h2>
+            <p id="mensaje-instruccion" class="mensaje-instrucciones">Ingresa el texto que desees encriptar o desencriptar.</p>
+            <button id="btn-copiar" onclick="copiar()" class="btn-copiar">Copiar</button>
+        </div>
+    </div>
+    <div id="mi-popup">
+        <p id="popup-texto"></p>
+        <button onclick="cerrarPopup()">Cerrar</button>
+    </div>
+</body>
+</html>
