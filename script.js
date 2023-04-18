@@ -37,13 +37,13 @@ const vocales = {
 //función para encriptar el texto del input
     function encriptarTexto(){
         let input = document.getElementById("ingresar-texto");
-        let valorInput = input.value.toLowerCase();
+        let valorInput = input.value;
         //si dan click en un boton sin ingresar un texto saldra el PopUp
             if(valorInput === "" ){
                 mostrarPopup("Debe ingresar un texto");
             }
         //si ingresa una letra mayúscula,número,acento,o signos mostrara otro PopUp
-            else if (!/^[a-z[A-Z]\s]+$/.test(valorInput)){
+            else if (!/^[a-z\s]+$/.test(valorInput)){
                 mostrarPopup("No incluyas letras mayúsculas, números, acentos, signos ni símbolos especiales");
             }
         //si ingresa el texto de forma correcto las vocales seran cambiadas por las del objeto "vocales"
@@ -62,7 +62,7 @@ const vocales = {
                 mostrarPopup("Debe ingresar un texto");
             }
         //si ingresa una letra mayúscula,número,acento,o signos mostrara otro PopUp
-            else if (!/^[a-z[A-Z]\s]+$/.test(valorInput)){
+            else if (!/^[a-z\s]+$/.test(valorInput)){
                 mostrarPopup("No incluyas letras mayúsculas, números, acentos, signos ni símbolos especiales");
             }
         //si ingresa el texto de forma correcto las vocales encriptadas cambiaran a su letra normal
